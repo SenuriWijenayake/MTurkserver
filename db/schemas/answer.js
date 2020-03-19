@@ -9,13 +9,11 @@ var answerSchema = new Schema({
 
   initialOpinion: Number,
   initialConfidence: Number,
-  initialTextOpinion: String,
   initialFamiliarity: Number,
 
   manipulationRadioOpinion: { type : Number, required: false },
   newOpinion : { type : Number, required: false },
   newConfidence : { type : Number, required: false },
-  newTextOpinion: { type : String, required: false },
 
   like : { type : Number, required: false },
   comment : { type : Number, required: false },

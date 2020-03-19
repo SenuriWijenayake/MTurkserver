@@ -1,7 +1,6 @@
 //Import the mongoose module
 var mongoose = require('mongoose');
 var mongoDB = 'mongodb://admin:admin1234@ds129670.mlab.com:29670/facebook';
-// var mongoDB = 'mongodb://admin:admin1234@ds237072.mlab.com:37072/gender-new';
 // var mongoDB = 'mongodb://localhost:27017/study4';
 
 mongoose.connect(mongoDB);
@@ -76,8 +75,7 @@ exports.saveAnswer = function(answer) {
       questionSet: answer.questionSet,
       initialOpinion: answer.initialOpinion,
       initialConfidence: answer.initialConfidence,
-      initialFamiliarity: answer.initialFamiliarity,
-      initialTextOpinion: answer.initialTextOpinion
+      initialFamiliarity: answer.initialFamiliarity
     });
 
     newAnswer.save(function(err, newAnswer) {
@@ -97,7 +95,6 @@ exports.updateAnswer = function(answer) {
     manipulationRadioOpinion: answer.manipulationRadioOpinion,
     newOpinion: answer.newOpinion,
     newConfidence: answer.newConfidence,
-    newTextOpinion: answer.newTextOpinion,
     like: answer.like,
     comment: answer.comment,
     share: answer.share,

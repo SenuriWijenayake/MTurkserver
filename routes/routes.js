@@ -35,7 +35,7 @@ var appRouter = function(app) {
 
     userAnswer.initialOpinion = parseInt(req.body.initialOpinion);
     userAnswer.initialConfidence = parseInt(req.body.initialConfidence);
-    userAnswer.initialTextOpinion = req.body.initialTextOpinion;
+    // userAnswer.initialTextOpinion = req.body.initialTextOpinion;
     userAnswer.initialFamiliarity = parseInt(req.body.initialFamiliarity);
 
     return new Promise(function(resolve, reject) {
@@ -56,7 +56,7 @@ var appRouter = function(app) {
     userAnswer.manipulationRadioOpinion = parseInt(req.body.manipulationRadioOpinion);
     userAnswer.newOpinion = parseInt(req.body.newOpinion);
     userAnswer.newConfidence = parseInt(req.body.newConfidence);
-    userAnswer.newTextOpinion = req.body.newTextOpinion;
+    // userAnswer.newTextOpinion = req.body.newTextOpinion;
 
     userAnswer.like = parseInt(req.body.like);
     userAnswer.comment = parseInt(req.body.comment);
