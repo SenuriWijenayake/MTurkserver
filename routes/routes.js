@@ -62,6 +62,7 @@ var appRouter = function(app) {
     userAnswer.comment = parseInt(req.body.comment);
     userAnswer.share = parseInt(req.body.share);
     userAnswer.report = parseInt(req.body.report);
+    userAnswer.factcheck = parseInt(req.body.factcheck);
 
     return new Promise(function(resolve, reject) {
       logic.updateAnswer(userAnswer).then(function(id) {

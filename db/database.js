@@ -99,6 +99,7 @@ exports.updateAnswer = function(answer) {
     comment: answer.comment,
     share: answer.share,
     report: answer.report,
+    factcheck: answer.factcheck,
     editTime: Date.now()
   };
 

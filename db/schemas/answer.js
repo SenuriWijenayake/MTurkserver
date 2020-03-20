@@ -19,6 +19,7 @@ var answerSchema = new Schema({
   comment : { type : Number, required: false },
   share : { type : Number, required: false },
   report : { type : Number, required: false },
+  factcheck : { type : Number, required: false },
 
   submitTime : { type : Date, required: false, default: Date.now },
   editTime : { type : Date, required: false, default: Date.now }
