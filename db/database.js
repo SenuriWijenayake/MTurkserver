@@ -75,7 +75,12 @@ exports.saveAnswer = function(answer) {
       questionSet: answer.questionSet,
       initialOpinion: answer.initialOpinion,
       initialConfidence: answer.initialConfidence,
-      initialFamiliarity: answer.initialFamiliarity
+      initialFamiliarity: answer.initialFamiliarity,
+      initialLike: answer.initialLike,
+      initialComment: answer.initialComment,
+      initialFactcheck: answer.initialFactcheck,
+      initialReport: answer.initialReport,
+      initialShare: answer.initialShare
     });
 
     newAnswer.save(function(err, newAnswer) {
@@ -95,11 +100,11 @@ exports.updateAnswer = function(answer) {
     manipulationRadioOpinion: answer.manipulationRadioOpinion,
     newOpinion: answer.newOpinion,
     newConfidence: answer.newConfidence,
-    like: answer.like,
-    comment: answer.comment,
-    share: answer.share,
-    report: answer.report,
-    factcheck: answer.factcheck,
+    newLike: answer.newLike,
+    newComment: answer.newComment,
+    newShare: answer.newShare,
+    newReport: answer.newReport,
+    newFactcheck: answer.newFactcheck,
     editTime: Date.now()
   };
 

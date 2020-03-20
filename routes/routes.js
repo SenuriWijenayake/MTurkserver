@@ -33,9 +33,14 @@ var appRouter = function(app) {
     userAnswer.questionId = parseInt(req.body.questionId);
     userAnswer.questionSet = req.body.questionSet;
 
+    userAnswer.initialLike = parseInt(req.body.initialLike);
+    userAnswer.initialComment = parseInt(req.body.initialComment);
+    userAnswer.initialShare = parseInt(req.body.initialShare);
+    userAnswer.initialReport = parseInt(req.body.initialReport);
+    userAnswer.initialFactcheck = parseInt(req.body.initialFactcheck);
+
     userAnswer.initialOpinion = parseInt(req.body.initialOpinion);
     userAnswer.initialConfidence = parseInt(req.body.initialConfidence);
-    // userAnswer.initialTextOpinion = req.body.initialTextOpinion;
     userAnswer.initialFamiliarity = parseInt(req.body.initialFamiliarity);
 
     return new Promise(function(resolve, reject) {
@@ -58,11 +63,11 @@ var appRouter = function(app) {
     userAnswer.newConfidence = parseInt(req.body.newConfidence);
     // userAnswer.newTextOpinion = req.body.newTextOpinion;
 
-    userAnswer.like = parseInt(req.body.like);
-    userAnswer.comment = parseInt(req.body.comment);
-    userAnswer.share = parseInt(req.body.share);
-    userAnswer.report = parseInt(req.body.report);
-    userAnswer.factcheck = parseInt(req.body.factcheck);
+    userAnswer.newLike = parseInt(req.body.like);
+    userAnswer.newComment = parseInt(req.body.comment);
+    userAnswer.newShare = parseInt(req.body.share);
+    userAnswer.newReport = parseInt(req.body.report);
+    userAnswer.newFactcheck = parseInt(req.body.factcheck);
 
     return new Promise(function(resolve, reject) {
       logic.updateAnswer(userAnswer).then(function(id) {

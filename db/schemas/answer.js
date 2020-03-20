@@ -11,15 +11,21 @@ var answerSchema = new Schema({
   initialConfidence: Number,
   initialFamiliarity: Number,
 
+  initialLike : Number,
+  initialComment : Number,
+  initialShare : Number,
+  initialReport : Number,
+  initialFactcheck : Number,
+
   manipulationRadioOpinion: { type : Number, required: false },
   newOpinion : { type : Number, required: false },
   newConfidence : { type : Number, required: false },
 
-  like : { type : Number, required: false },
-  comment : { type : Number, required: false },
-  share : { type : Number, required: false },
-  report : { type : Number, required: false },
-  factcheck : { type : Number, required: false },
+  newLike : { type : Number, required: false },
+  newComment : { type : Number, required: false },
+  newShare : { type : Number, required: false },
+  newReport : { type : Number, required: false },
+  newFactcheck : { type : Number, required: false },
 
   submitTime : { type : Date, required: false, default: Date.now },
   editTime : { type : Date, required: false, default: Date.now }
