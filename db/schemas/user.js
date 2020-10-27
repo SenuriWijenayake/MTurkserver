@@ -7,10 +7,10 @@ var userSchema = new Schema({
   gender: String,
   age: String,
   education: String,
-  socialmedia : String,
+  ethnicity : String,
   genderSpecified : {type : String, required: false},
-  educationSpecified : {type : String, required: false},
-  questionSet : String,
+  ethnicitySpecified : {type : String, required: false},
+  // questionSet : String,
   qOrder : {type : Array},
   code : {type : String, required: false}
 });
