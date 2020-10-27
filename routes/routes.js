@@ -24,27 +24,18 @@ var appRouter = function(app) {
     res.status(200).send(result);
   });
 
-  app.post('/feedback', function(req, res) {
+  app.post('/saveAnswer', function(req, res) {
 
-    console.log("Request received at feedback endpoint");
-    var userAnswer = {};
-
-    userAnswer.userId = req.body.userId;
-    userAnswer.questionId = parseInt(req.body.questionId);
-    userAnswer.questionSet = req.body.questionSet;
-
-    userAnswer.initialLike = parseInt(req.body.initialLike);
-    userAnswer.initialComment = parseInt(req.body.initialComment);
-    userAnswer.initialShare = parseInt(req.body.initialShare);
-    userAnswer.initialReport = parseInt(req.body.initialReport);
-    userAnswer.initialFactcheck = parseInt(req.body.initialFactcheck);
-
-    userAnswer.initialOpinion = parseInt(req.body.initialOpinion);
-    userAnswer.initialConfidence = parseInt(req.body.initialConfidence);
-    userAnswer.initialFamiliarity = parseInt(req.body.initialFamiliarity);
+    console.log("Request received at saveAnswer endpoint");
+    var answer = {};
+    answer.userId = req.body.userId;
+    answer.question = parseInt(req.body.question);
+    answer.set = parseInt(req.body.set);
+    answer.optionSelected = req.body.optionSelected;
+    answer.explanation = req.body.explanation;
 
     return new Promise(function(resolve, reject) {
-      logic.saveAnswer(userAnswer).then(function(id) {
+      logic.saveAnswer(answer).then(function(id) {
         resolve(res.status(200).send(id));
       });
     });

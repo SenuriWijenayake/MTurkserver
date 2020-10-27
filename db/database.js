@@ -70,16 +70,10 @@ exports.saveAnswer = function(answer) {
   return new Promise(function(resolve, reject) {
     var newAnswer = new Answer({
       userId: answer.userId,
-      questionId: answer.questionId,
-      questionSet: answer.questionSet,
-      initialOpinion: answer.initialOpinion,
-      initialConfidence: answer.initialConfidence,
-      initialFamiliarity: answer.initialFamiliarity,
-      initialLike: answer.initialLike,
-      initialComment: answer.initialComment,
-      initialFactcheck: answer.initialFactcheck,
-      initialReport: answer.initialReport,
-      initialShare: answer.initialShare
+      question: answer.question,
+      set: answer.set,
+      optionSelected: answer.optionSelected,
+      explanation: answer.explanation
     });
 
     newAnswer.save(function(err, newAnswer) {

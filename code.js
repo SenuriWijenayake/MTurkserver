@@ -100,7 +100,6 @@ exports.saveUserData = function(user) {
 
 //Function to save an answer
 exports.saveAnswer = function(ans) {
-  console.log(ans);
   return new Promise(function(resolve, reject) {
     db.saveAnswer(ans).then(function(answerId) {
       resolve(answerId);
