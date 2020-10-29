@@ -3,6 +3,7 @@ var utils = require('./utils');
 var bigVar = require('./db/bigFiveVariables');
 var db = require('./db/database');
 var shuffle = require('shuffle-array');
+var questions = utils.questions;
 
 
 exports.shuffleArray = function(array){
@@ -34,16 +35,9 @@ exports.getAllQuestions = function() {
 };
 
 //Function to get question by Id
-exports.getQuestionBySetAndId = function(set, id) {
-  var questions = [];
-  if (set == "1") {
-    questions = utils.questions;
-  }
-  if (set == "2") {
-    questions = utils.questionsTwo;
-  }
+exports.getQuestionById = function(id) {
   for (var i = 0; i < questions.length; i++) {
-    if (questions[i].questionNumber == id) {
+    if (questions[i].qId == id) {
       return (questions[i]);
     }
   }
@@ -87,7 +81,7 @@ exports.getBigFiveQuestions = function() {
 
 //Function to save user data
 exports.saveUserData = function(user) {
-  var q = [-1,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26];
+  var q = [1,2,3,4,5,6,7];
   var qOrder = shuffle(q);
 
   user.qOrder = qOrder;

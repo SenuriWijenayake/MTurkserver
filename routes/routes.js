@@ -18,8 +18,7 @@ var appRouter = function(app) {
 
   //Endpoint to get a question by id
   app.post('/question', function(req, res) {
-    console.log(req.body.set, req.body.id);
-    data = logic.getQuestionBySetAndId(req.body.set, req.body.id);
+    data = logic.getQuestionById(req.body.qId);
     result = JSON.stringify(data);
     res.status(200).send(result);
   });
